@@ -1,9 +1,9 @@
 import Button from './Button';
 
-export default function List({ value, setValue }) {
+export default function List() {
   return (<>
-    <Button value={value} setValue={setValue} />
-    <Button value={value} setValue={setValue} />
-    <Button value={value} setValue={setValue} />
+    <Button />
+    <Button />
+    <Button />
   </>);
 }

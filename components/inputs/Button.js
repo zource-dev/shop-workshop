@@ -1,7 +1,12 @@
-export default function Button({ value, setValue }) {
+import { useContext } from 'react';
+import Counter from '@/components/contexts/Counter';
+
+export default function Button() {
+    const counter = useContext(Counter);
+
     const handleClick = function() {
-      setValue(Math.random());
+      counter.setValue(Math.random());
     };
 
-    return <button onClick={handleClick}>{value}</button>;
+    return <button onClick={handleClick}>{counter.value}</button>;
 }
